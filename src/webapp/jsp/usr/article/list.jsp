@@ -14,13 +14,12 @@
         <ul class="mt-5">
             <c:forEach items="${articles}" var="article">
             <li class="flex">
-                번호 : ${article.id}
-                <br />
-                등록날짜 : ${article.createdDate}
-                <br />
-                수정날짜 : ${article.createdDate}
-                <br />
-                제목 : ${article.title}
+                <a href="/usr/article/detail/${article.id}" class="flex p-2 group">
+                    <span class="badge badge-primary mr-2">${article.id}</span>
+                    <div class="group-hover:underline group-hover:text-[red]">
+                            ${article.title} - ${article.createdDate}
+                    </div>
+                </a>
             </li>
             </c:forEach>
         </ul>
