@@ -15,4 +15,36 @@ public class ArticleService {
     public List<ArticleDto> getArticles() {
         return articleRepository.getArticles();
     }
+
+    public ArticleDto getArticleById(long id) {
+        return articleRepository.getArticleById(id);
+    }
+
+    public long getArticlesCount() {
+        return articleRepository.getArticlesCount();
+    }
+
+    public long write(String title, String body, boolean isBlind) {
+        return articleRepository.write(title, body, isBlind);
+    }
+
+    public void modify(long id, String title, String body, boolean isBlind) {
+        articleRepository.modify(id,title, body, isBlind );
+    }
+
+    public void delete(long id) {
+        articleRepository.delete(id);
+    }
+
+    public ArticleDto selectnextArticle(long id) {
+        return articleRepository.selectnextArticle(id);
+    }
+
+    public ArticleDto selectpreviousArticle(long id) {
+        return articleRepository.selectpreviousArticle(id);
+    }
+
+    public ArticleDto getNextArticle(long id) {
+        return articleRepository.getNextArticle(id);
+    }
 }
